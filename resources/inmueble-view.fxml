@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="infrastructure.ui.InmuebleController">
+    <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+
+    <top>
+        <Label fx:id="lblModo" text="Modo: Creación">
+            <padding><Insets bottom="8"/></padding>
+        </Label>
+    </top>
+
+    <left>
+        <VBox spacing="8" prefWidth="320">
+            <padding><Insets right="12"/></padding>
+            <Label text="CHIP"/>
+            <TextField fx:id="txtChip"/>
+            <Label text="Fecha de compra"/>
+            <DatePicker fx:id="dpFecha" maxWidth="Infinity"/>
+            <Label text="Dirección"/>
+            <TextField fx:id="txtDireccion"/>
+            <Label text="Estado"/>
+            <ComboBox fx:id="cbEstado" maxWidth="Infinity"/>
+            <Label text="Propietario"/>
+            <ComboBox fx:id="cbPropietario" maxWidth="Infinity"/>
+            <Label text="Tipo de inmueble"/>
+            <ComboBox fx:id="cbTipo" maxWidth="Infinity"/>
+
+            <VBox fx:id="boxApartamento" spacing="8">
+                <Label text="Número de piso"/>
+                <TextField fx:id="txtNumeroPiso"/>
+            </VBox>
+
+            <VBox fx:id="boxCasa" spacing="8">
+                <Label text="Cantidad de pisos"/>
+                <TextField fx:id="txtCantidadPisos"/>
+                <CheckBox fx:id="chkSotano" text="Tiene sótano"/>
+                <VBox fx:id="boxSotano" spacing="8">
+                    <Label text="Área del sótano (m²)"/>
+                    <TextField fx:id="txtAreaSotano"/>
+                    <Label text="Uso del sótano"/>
+                    <ComboBox fx:id="cbTipoUsoSotano" maxWidth="Infinity"/>
+                </VBox>
+            </VBox>
+
+            <HBox spacing="8">
+                <Button fx:id="btnGuardar" text="Guardar" onAction="#onGuardar"/>
+                <Button fx:id="btnConsultar" text="Consultar" onAction="#onConsultar"/>
+                <Button fx:id="btnEliminar" text="Eliminar" onAction="#onEliminar"/>
+                <Button fx:id="btnLimpiar" text="Limpiar" onAction="#onLimpiar"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <center>
+        <TableView fx:id="tblInmuebles">
+            <columns>
+                <TableColumn fx:id="colChip" text="CHIP" prefWidth="90"/>
+                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="100"/>
+                <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="160"/>
+                <TableColumn fx:id="colFecha" text="Fecha compra" prefWidth="100"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="90"/>
+                <TableColumn fx:id="colPropietario" text="Propietario" prefWidth="140"/>
+                <TableColumn fx:id="colDetalle" text="Detalle" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
