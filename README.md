@@ -138,14 +138,9 @@ crud_hexagonal
 └── pom.xml
 ```
 
-## Diagramas
+# Diagramas disponibles en la Wiki
 
-- [Diagrama de arquitectura hexagonal](c:\Users\secun\Pictures\Screenshots\Captura de pantalla 2026-10-14 161015.png)
-- [Diagrama de clases UML](c:\Users\secun\Pictures\Screenshots\Captura de pantalla 2026-10-14 162459.png)
 
-## Video de demostración
-
-- [Ver demostración](https://REEMPLAZA-CON-EL-ENLACE-DEL-VIDEO)
 
 ## Documentación del código
 
